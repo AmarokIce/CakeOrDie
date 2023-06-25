@@ -13,7 +13,7 @@ import net.minecraft.world.level.block.Blocks
 import net.minecraft.world.level.block.state.BlockState
 import net.minecraft.world.phys.BlockHitResult
 
-abstract class CakeBlock: Block(Properties.copy(Blocks.CAKE).strength(0.05F).lightLevel { 5 }.noOcclusion()) {
+open class CakeBlock: Block(Properties.copy(Blocks.CAKE).strength(0.05F).lightLevel { 5 }.noOcclusion()) {
     fun RestoreHunger(): Boolean = true
     override fun use(state: BlockState, world: Level, pos: BlockPos, player: Player, hand: InteractionHand, hit: BlockHitResult): InteractionResult {
         super.use(state, world, pos, player, hand, hit)

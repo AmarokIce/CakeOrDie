@@ -13,7 +13,7 @@ import net.minecraft.world.level.block.Blocks
 import net.minecraft.world.level.block.state.BlockState
 import net.minecraft.world.phys.BlockHitResult
 
-abstract class TeaBlock: Block(Properties.copy(Blocks.GLASS).strength(0.02F).lightLevel { 8 }.noOcclusion()) {
+open class TeaBlock: Block(Properties.copy(Blocks.GLASS).strength(0.02F).lightLevel { 8 }.noOcclusion()) {
     override fun use(state: BlockState, world: Level, pos: BlockPos, player: Player, hand: InteractionHand, hit: BlockHitResult): InteractionResult {
         super.use(state, world, pos, player, hand, hit)
 

@@ -1,10 +1,12 @@
 package club.someoneice.cakeordie.init
 
 import club.someoneice.cakeordie.COD
-import club.someoneice.cakeordie.common.asItemStack
 import club.someoneice.cakeordie.common.bean.ItemBeans
-import club.someoneice.cakeordie.common.instance
+import club.someoneice.cakeordie.common.item.Candy
+import club.someoneice.cakeordie.common.item.ColorPaperCannon
 import club.someoneice.cakeordie.common.item.Invitation
+import club.someoneice.cakeordie.util.asItemStack
+import club.someoneice.cakeordie.util.instance
 import com.google.common.collect.Lists
 import net.minecraft.world.food.FoodProperties
 import net.minecraft.world.item.BlockItem
@@ -18,13 +20,17 @@ object ItemList {
     val REGISTRY = DeferredRegister.create(ForgeRegistries.ITEMS, COD.MODID)
 
     /* Item */
-    val INVITATION      by REGISTRY.registerObject("invitation") { Invitation() }
+    val INVITATION          by REGISTRY.registerObject("invitation")    { Invitation() }
+    val COLOR_PAPER         by REGISTRY.registerObject("color_paper")   { ItemBeans.ItemBase() }
+    val PINATA_STICK        by REGISTRY.registerObject("pinata_stick")  { ItemBeans.ItemBase() }
+    val ColorPaperCannon    by REGISTRY.registerObject("color_cannon")  { ColorPaperCannon() }
 
     /* Food */
-    val CHILI_SAUCE     by REGISTRY.registerObject("chili_sauce") { ItemBeans.ItemFoodBase(Item.Properties().food(FoodBean(fast = true, alwaysEat = true)), isDrink = true, Items.GLASS_BOTTLE.asItemStack(), Lists.newArrayList(EffectInit.CHILI_FIRE.instance(20 * 20, 0))) }
+    val CHILI_SAUCE         by REGISTRY.registerObject("chili_sauce")   { ItemBeans.ItemFoodBase(Item.Properties().food(FoodBean(fast = true, alwaysEat = true)), isDrink = true, Items.GLASS_BOTTLE.asItemStack(), Lists.newArrayList(EffectList.CHILI_FIRE.instance(20 * 20, 0))) }
+    val CANDY               by REGISTRY.registerObject("candy")         { Candy() }
 
     /* BlockItem*/
-    val BLOCKITEM_PLANT by REGISTRY.registerObject("plant") { BlockItem(BlockList.BLOCK_PLANT, Item.Properties()) }
+    val BLOCKITEM_PLANT     by REGISTRY.registerObject("plant")         { BlockItem(BlockList.BLOCK_PLANT, Item.Properties()) }
 
     fun FoodBean(hunger: Int = 2, saturation: Float = 0.1F, wolf: Boolean = false, fast: Boolean = false, alwaysEat: Boolean = false): FoodProperties {
         val builder = FoodProperties.Builder()
@@ -38,6 +44,7 @@ object ItemList {
         return builder.build()
     }
 
-    // @Suppress("Deprecated")
+    /* If we want to init the items with Vanilla ... */
+    // @SuppressWarnings("Deprecated")
     // fun registry(item: Item, name: String): Item = Registry.register(BuiltInRegistries.ITEM, ResourceLocation(COD.MODID, name), item)
 }

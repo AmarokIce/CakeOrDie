@@ -1,7 +1,8 @@
 package club.someoneice.cakeordie.common.item
 
 import club.someoneice.cakeordie.common.bean.ItemBeans
-import club.someoneice.cakeordie.common.setCountWithReturn
+import club.someoneice.cakeordie.util.LangInvitation
+import club.someoneice.cakeordie.util.setCountWithReturn
 import net.minecraft.nbt.CompoundTag
 import net.minecraft.network.chat.Component
 import net.minecraft.world.InteractionHand
@@ -41,7 +42,7 @@ class Invitation: ItemBeans.ItemBase() {
             val z = nbt.getInt("z")
 
             player.teleportTo(x.toDouble(), y.toDouble(), z.toDouble())
-            player.sendSystemMessage(Component.translatable("cake.invitation.message").append(nbt.getString("compere")))
+            player.sendSystemMessage(Component.translatable(LangInvitation.InvitationInfoSuccess).append(nbt.getString("compere")))
 
             val gift = ItemStack.of(nbt.getCompound("gift"))
             player.addItem(gift)
@@ -49,7 +50,7 @@ class Invitation: ItemBeans.ItemBase() {
             return InteractionResultHolder.success(item)
         }
 
-        player.sendSystemMessage(Component.translatable("cake.invitation_fail.message"))
+        player.sendSystemMessage(Component.translatable(LangInvitation.InvitationInfoFail))
         return InteractionResultHolder.fail(item)
     }
 
@@ -57,12 +58,12 @@ class Invitation: ItemBeans.ItemBase() {
         val tag = item.orCreateTag
         if (tag.contains("invitation_pos")) {
             val nbt = tag.getCompound("invitation_pos")
-            list.add(Component.translatable("cake.invitation_pos.message").append(nbt.getInt("x").toString() + ", " + nbt.getInt("y").toString() + ", " + nbt.getInt("z")))
-            list.add(Component.translatable("cake.invitation_compere.message").append(nbt.getString("compere")))
-            list.add(Component.translatable("cake.invitation_right.message"))
+            list.add(Component.translatable(LangInvitation.InvitationInfo))
+            list.add(Component.translatable(LangInvitation.InvitationPos).append(nbt.getInt("x").toString() + ", " + nbt.getInt("y").toString() + ", " + nbt.getInt("z")))
+            list.add(Component.translatable(LangInvitation.InvitationCompere).append(nbt.getString("compere")))
 
             if (nbt.contains("gift"))
-                list.add(Component.translatable("cake.invitation_gift.message"))
+                list.add(Component.translatable(LangInvitation.InvitationGift))
         }
     }
 }

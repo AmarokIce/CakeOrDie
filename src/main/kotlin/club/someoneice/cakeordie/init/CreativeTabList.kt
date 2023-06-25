@@ -1,7 +1,7 @@
 package club.someoneice.cakeordie.init
 
 import club.someoneice.cakeordie.COD
-import club.someoneice.cakeordie.common.asItemStack
+import club.someoneice.cakeordie.util.asItemStack
 import net.minecraft.core.registries.Registries
 import net.minecraft.network.chat.Component
 import net.minecraft.world.item.CreativeModeTab
