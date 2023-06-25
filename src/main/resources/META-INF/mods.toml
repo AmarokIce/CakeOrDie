@@ -1,27 +1,25 @@
 modLoader="kotlinforforge"
-loaderVersion="[3,)"
-license='LGPL'
+loaderVersion="[4,)"
+license="${mod_license}"
 
 [[mods]]
-modId="teaordie"
-version="${file.jarVersion}"
-displayName="TeaOrDie:MagicCake"
-credits="Someoneice"
+modId="${mod_id}"
+version="${mod_version}"
+displayName="${mod_name}"
+credits="Team Starry"
 authors="Someoneice"
-description='''
-A Minecraft mod for game Teacon
-'''
+description='''${mod_description}'''
 
-[[dependencies.teaordie]]
+[[dependencies.${mod_id}]]
     modId="forge"
     mandatory=true
-    versionRange="[41,)"
+    versionRange="${forge_version_range}"
     ordering="NONE"
     side="BOTH"
 
-[[dependencies.teaordie]]
+[[dependencies.${mod_id}]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.19,1.20)"
+    versionRange="[1.20,1.21)"
     ordering="NONE"
     side="BOTH"
