@@ -12,7 +12,7 @@ class EffectChili: MobEffect(MobEffectCategory.HARMFUL, Color.RED.rgb) {
     override fun isDurationEffectTick(tick: Int, lv: Int): Boolean = true
     override fun applyEffectTick(entity: LivingEntity, lv: Int) {
         super.applyEffectTick(entity, lv)
-        entity.setSecondsOnFire(10)
+        entity.setSecondsOnFire(5)
         val world = entity.commandSenderWorld
         val pos = BlockPos(floor(entity.x).toInt(), floor(entity.y).toInt(), floor(entity.z).toInt())
         world.setBlock(pos, BaseFireBlock.getState(world, pos), 11)

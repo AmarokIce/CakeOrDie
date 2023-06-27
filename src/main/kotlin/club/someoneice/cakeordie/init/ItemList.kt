@@ -2,9 +2,9 @@ package club.someoneice.cakeordie.init
 
 import club.someoneice.cakeordie.COD
 import club.someoneice.cakeordie.common.bean.ItemBeans
-import club.someoneice.cakeordie.common.item.Candy
-import club.someoneice.cakeordie.common.item.ColorPaperCannon
-import club.someoneice.cakeordie.common.item.Invitation
+import club.someoneice.cakeordie.common.item.ItemCandy
+import club.someoneice.cakeordie.common.item.ItemColorPaperCannon
+import club.someoneice.cakeordie.common.item.ItemInvitation
 import club.someoneice.cakeordie.util.asItemStack
 import club.someoneice.cakeordie.util.instance
 import com.google.common.collect.Lists
@@ -20,14 +20,14 @@ object ItemList {
     val REGISTRY = DeferredRegister.create(ForgeRegistries.ITEMS, COD.MODID)
 
     /* Item */
-    val INVITATION          by REGISTRY.registerObject("invitation")    { Invitation() }
+    val INVITATION          by REGISTRY.registerObject("invitation")    { ItemInvitation() }
     val COLOR_PAPER         by REGISTRY.registerObject("color_paper")   { ItemBeans.ItemBase() }
     val PINATA_STICK        by REGISTRY.registerObject("pinata_stick")  { ItemBeans.ItemBase() }
-    val ColorPaperCannon    by REGISTRY.registerObject("color_cannon")  { ColorPaperCannon() }
+    val ColorPaperCannon    by REGISTRY.registerObject("color_cannon")  { ItemColorPaperCannon() }
 
     /* Food */
-    val CHILI_SAUCE         by REGISTRY.registerObject("chili_sauce")   { ItemBeans.ItemFoodBase(Item.Properties().food(FoodBean(fast = true, alwaysEat = true)), isDrink = true, Items.GLASS_BOTTLE.asItemStack(), Lists.newArrayList(EffectList.CHILI_FIRE.instance(20 * 20, 0))) }
-    val CANDY               by REGISTRY.registerObject("candy")         { Candy() }
+    val CHILI_SAUCE         by REGISTRY.registerObject("chili_sauce")   { ItemBeans.ItemFoodBase(Item.Properties().food(FoodBean(fast = true, alwaysEat = true)), isDrink = true, Items.GLASS_BOTTLE.asItemStack(), Lists.newArrayList(EffectList.CHILI_FIRE.instance(20 * 4, 0))) }
+    val CANDY               by REGISTRY.registerObject("candy")         { ItemCandy() }
 
     /* BlockItem*/
     val BLOCKITEM_PLANT     by REGISTRY.registerObject("plant")         { BlockItem(BlockList.BLOCK_PLANT, Item.Properties()) }

@@ -14,9 +14,8 @@ import net.minecraft.world.level.block.state.BlockState
 import net.minecraft.world.phys.BlockHitResult
 
 open class TeaBlock: Block(Properties.copy(Blocks.GLASS).strength(0.02F).lightLevel { 8 }.noOcclusion()) {
+    @Deprecated("Deprecated in Java")
     override fun use(state: BlockState, world: Level, pos: BlockPos, player: Player, hand: InteractionHand, hit: BlockHitResult): InteractionResult {
-        super.use(state, world, pos, player, hand, hit)
-
         world.playLocalSound(pos, SoundEvents.GENERIC_DRINK, SoundSource.BLOCKS, 0.5f, 2.6f + (world.random.nextFloat() - world.random.nextFloat()) * 0.8f, false)
         world.setBlock(pos, BlockList.BLOCK_PLANT.defaultBlockState(), 3)
         world.removeBlockEntity(pos)

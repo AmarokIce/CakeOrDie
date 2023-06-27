@@ -1,0 +1,22 @@
+{
+  "party_dragon": {
+    "sounds": [
+      "cakeordie:party_dragon"
+    ]
+  },
+  "pinata0": {
+    "sounds": [
+      "cakeordie:pinata0"
+    ]
+  },
+  "pinata1": {
+    "sounds": [
+      "cakeordie:pinata1"
+    ]
+  },
+  "pinata2": {
+    "sounds": [
+      "cakeordie:pinata2"
+    ]
+  }
+}

@@ -1,10 +1,10 @@
 package club.someoneice.cakeordie.util
 
-import club.someoneice.cakeordie.common.item.Invitation
+import club.someoneice.cakeordie.common.item.ItemInvitation
 
 /**
- * The lang for Invitation.
- * @see Invitation
+ * The lang for ItemInvitation.
+ * @see ItemInvitation
  * */
 object LangInvitation {
     val InvitationInfoSuccess   = "cake.invitation.message"

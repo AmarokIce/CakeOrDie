@@ -13,7 +13,7 @@ import net.minecraft.world.item.TooltipFlag
 import net.minecraft.world.level.Level
 import kotlin.math.floor
 
-class Invitation: ItemBeans.ItemBase() {
+class ItemInvitation: ItemBeans.ItemBase() {
     override fun use(world: Level, player: Player, hand: InteractionHand): InteractionResultHolder<ItemStack> {
         val item = player.getItemInHand(hand)
         if (world.isClientSide || hand == InteractionHand.OFF_HAND) return InteractionResultHolder.pass(item)
