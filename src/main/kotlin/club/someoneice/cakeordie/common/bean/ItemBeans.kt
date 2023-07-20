@@ -1,5 +1,6 @@
 package club.someoneice.cakeordie.common.bean
 
+import club.someoneice.cakeordie.init.ItemList
 import club.someoneice.cakeordie.util.copy
 import com.google.common.collect.Lists
 import net.minecraft.world.InteractionHand
@@ -11,6 +12,10 @@ import net.minecraft.world.item.Item
 import net.minecraft.world.item.ItemStack
 import net.minecraft.world.item.UseAnim
 import net.minecraft.world.level.Level
+
+open class ItemSauce(): ItemBeans.ItemFoodBase(Properties().food(ItemList.FoodBean()))
+open class ItemMisc(): ItemBeans.ItemBase()
+open class ItemMiscTop(): ItemBeans.ItemBase(Properties().stacksTo(1))
 
 sealed class ItemBeans(properties: Properties = Properties()): Item(properties) {
     open public class ItemBase(properties: Properties = Properties()): ItemBeans(properties) {
@@ -26,11 +31,10 @@ sealed class ItemBeans(properties: Properties = Properties()): Item(properties) 
                 entity.addItem(returnItem)
                 for (effect in effects) entity.addEffect(effect.copy())
             }
+
             return item
         }
 
-        override fun getUseAnimation(item: ItemStack): UseAnim {
-            return if (isDrink) UseAnim.DRINK else UseAnim.EAT
-        }
+        override fun getUseAnimation(item: ItemStack): UseAnim = if (isDrink) UseAnim.DRINK else UseAnim.EAT
     }
 }

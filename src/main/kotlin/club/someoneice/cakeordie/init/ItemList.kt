@@ -24,10 +24,12 @@ object ItemList {
     val COLOR_PAPER         by REGISTRY.registerObject("color_paper")   { ItemBeans.ItemBase() }
     val PINATA_STICK        by REGISTRY.registerObject("pinata_stick")  { ItemBeans.ItemBase() }
     val ColorPaperCannon    by REGISTRY.registerObject("color_cannon")  { ItemColorPaperCannon() }
+    val SUPER_SUGAR         by REGISTRY.registerObject("super_sugar")   { ItemBeans.ItemBase() }
 
     /* Food */
     val CHILI_SAUCE         by REGISTRY.registerObject("chili_sauce")   { ItemBeans.ItemFoodBase(Item.Properties().food(FoodBean(fast = true, alwaysEat = true)), isDrink = true, Items.GLASS_BOTTLE.asItemStack(), Lists.newArrayList(EffectList.CHILI_FIRE.instance(20 * 4, 0))) }
     val CANDY               by REGISTRY.registerObject("candy")         { ItemCandy() }
+    val MEAT                by REGISTRY.registerObject("meat")          { ItemBeans.ItemFoodBase(Item.Properties().food(FoodBean(6, 0.5F)), isDrink = false) }
 
     /* BlockItem*/
     val BLOCKITEM_PLANT     by REGISTRY.registerObject("plant")         { BlockItem(BlockList.BLOCK_PLANT, Item.Properties()) }

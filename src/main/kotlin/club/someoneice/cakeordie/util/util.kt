@@ -20,14 +20,10 @@ fun Block.asItemStack(size: Int = 1): ItemStack {
 }
 
 /** Return the effect's instance. */
-fun MobEffect.instance(time: Int, lv: Int = 0): MobEffectInstance {
-    return MobEffectInstance(this, time, lv)
-}
+fun MobEffect.instance(time: Int, lv: Int = 0): MobEffectInstance = MobEffectInstance(this, time, lv)
 
 /** Copy the effect instance, make sure a new object on somewhere. */
-fun MobEffectInstance.copy(): MobEffectInstance {
-    return this.effect.instance(this.duration, this.amplifier)
-}
+fun MobEffectInstance.copy(): MobEffectInstance = this.effect.instance(this.duration, this.amplifier)
 
 /** Set the count inline. */
 fun ItemStack.setCountWithReturn(size: Int): ItemStack {

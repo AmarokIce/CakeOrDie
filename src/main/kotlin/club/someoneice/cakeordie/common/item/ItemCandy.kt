@@ -3,14 +3,12 @@ package club.someoneice.cakeordie.common.item
 import club.someoneice.cakeordie.common.bean.ItemBeans
 import club.someoneice.cakeordie.init.EffectList
 import club.someoneice.cakeordie.init.ItemList
-import club.someoneice.cakeordie.init.ParticleList
 import club.someoneice.cakeordie.util.addParticleColorPaper
 import club.someoneice.cakeordie.util.instance
 import com.google.common.collect.Lists
 import net.minecraft.world.effect.MobEffect
 import net.minecraft.world.effect.MobEffects
 import net.minecraft.world.entity.LivingEntity
-import net.minecraft.world.entity.player.Player
 import net.minecraft.world.item.ItemStack
 import net.minecraft.world.level.Level
 

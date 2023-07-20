@@ -24,6 +24,4 @@ class BlockBalloon: Block(Properties.of().noOcclusion().strength(0.01F).sound(So
     override fun stepOn(world: Level, pos: BlockPos, state: BlockState, entity: Entity) {
         world.removeBlock(pos, true)
     }
-
-
 }

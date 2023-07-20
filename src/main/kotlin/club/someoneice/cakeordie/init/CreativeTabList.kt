@@ -17,9 +17,9 @@ object CreativeTabList {
             .withTabsBefore(CreativeModeTabs.SPAWN_EGGS)
             .title(Component.translatable("itemGroup.cake_or_die"))
             .icon { ItemList.CHILI_SAUCE.asItemStack() }
-        .displayItems {
+            .displayItems {
                 _, output ->
                 for (item in ItemList.REGISTRY.entries) output.accept(item.get())
-        }.build()
+            }.build()
     }
 }
