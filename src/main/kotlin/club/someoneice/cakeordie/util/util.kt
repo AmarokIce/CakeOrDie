@@ -31,7 +31,8 @@ fun ItemStack.setCountWithReturn(size: Int): ItemStack {
     return this
 }
 
-fun Any.random(): Random = Random()
+val random: Random = Random()
+fun random(): Random = random
 
 fun Level.addParticleColorPaper(posX: Double, posY: Double, posZ: Double, size: Int = 50) {
     val rand = Random()

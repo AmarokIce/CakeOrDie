@@ -26,7 +26,6 @@ class BlockPinata: Block(Properties.copy(Blocks.GLASS).strength(0.4F).sound(Soun
         val PINATA_SOUND_ARRAY: ArrayList<SoundEvent> = Lists.newArrayList<SoundEvent>(SoundList.PINATA_0, SoundList.PINATA_1, SoundList.PINATA_2)
     }
 
-    @Deprecated("Deprecated in Java")
     override fun use(state: BlockState, world: Level, pos: BlockPos, player: Player, hand: InteractionHand, hit: BlockHitResult): InteractionResult {
         if (player.mainHandItem.item != ItemList.PINATA_STICK) return InteractionResult.PASS
 
@@ -34,7 +33,7 @@ class BlockPinata: Block(Properties.copy(Blocks.GLASS).strength(0.4F).sound(Soun
         world.addParticleColorPaper(player.x, player.y, player.z)
         world.removeBlock(pos, true)
 
-        world.addFreshEntity(ItemEntity(world, pos.x.toDouble(), pos.y.toDouble(), pos.z.toDouble(), ItemList.CANDY.asItemStack(world.random.nextInt(4))))
+        world.addFreshEntity(ItemEntity(world, pos.x.toDouble(), pos.y.toDouble(), pos.z.toDouble(), ItemList.CANDY.asItemStack(world.random.nextInt(4) + 1)))
 
         return InteractionResult.SUCCESS
     }

@@ -19,9 +19,8 @@ class EffectDigestion: MobEffect(MobEffectCategory.BENEFICIAL, Color.RED.rgb) {
         if (!entity.level().isClientSide && entity is Player) {
             val food = entity.foodData
             val exhaustion = food.exhaustionLevel
-            if (exhaustion > 15.0f && random().nextDouble() > (0.75 - lv / 10.0)) {
-                entity.causeFoodExhaustion(-(exhaustion / 2))
-            }
+            if (exhaustion > 15.0f)
+                entity.causeFoodExhaustion(-random.nextFloat(exhaustion))
         }
     }
 }

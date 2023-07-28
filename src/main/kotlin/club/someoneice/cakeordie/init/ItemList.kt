@@ -24,26 +24,34 @@ object ItemList {
     val REGISTRY = DeferredRegister.create(ForgeRegistries.ITEMS, COD.MODID)
 
     /* Item */
-    val INVITATION          by REGISTRY.registerObject("invitation")        { ItemInvitation() }
-    val COLOR_PAPER         by REGISTRY.registerObject("color_paper")       { ItemBeans.ItemBase() }
-    val PINATA_STICK        by REGISTRY.registerObject("pinata_stick")      { ItemBeans.ItemBase() }
-    val ColorPaperCannon    by REGISTRY.registerObject("color_cannon")      { ItemColorPaperCannon() }
-    val SUPER_SUGAR         by REGISTRY.registerObject("super_sugar")       { ItemBeans.ItemBase() }
+    val INVITATION          by REGISTRY.registerObject("invitation")            { ItemInvitation() }
+    val COLOR_PAPER         by REGISTRY.registerObject("color_paper")           { ItemBeans.ItemBase() }
+    val PINATA_STICK        by REGISTRY.registerObject("pinata_stick")          { ItemBeans.ItemBase() }
+    val COLOR_PAPER_CANNON  by REGISTRY.registerObject("color_cannon")          { ItemColorPaperCannon() }
+    val SUPER_SUGAR         by REGISTRY.registerObject("super_sugar")           { ItemBeans.ItemBase() }
 
     /* Food */
-    val CHILI               by REGISTRY.registerObject("chili")             { ItemChili() }
-    val CANDY               by REGISTRY.registerObject("candy")             { ItemCandy() }
-    val CHILI_SAUCE         by REGISTRY.registerObject("chili_sauce")       { ItemBeans.ItemFoodBase(Item.Properties().food(FoodBean(fast = true, alwaysEat = true)), isDrink = true, Items.GLASS_BOTTLE.asItemStack(), Lists.newArrayList(EffectList.CHILI_FIRE.instance(20 * 4, 0))) }
-    val MEAT                by REGISTRY.registerObject("meat")              { ItemBeans.ItemFoodBase(Item.Properties().food(FoodBean(6, 0.5F)), isDrink = false) }
+    val CHILI               by REGISTRY.registerObject("chili")                 { ItemChili() }
+    val CANDY               by REGISTRY.registerObject("candy")                 { ItemCandy() }
+    val CHILI_SAUCE         by REGISTRY.registerObject("chili_sauce")           { ItemBeans.ItemFoodBase(Item.Properties().food(FoodBean(fast = true, alwaysEat = true)), isDrink = true, Items.GLASS_BOTTLE.asItemStack(), Lists.newArrayList(EffectList.CHILI_FIRE.instance(20 * 4, 0))) }
+    val MEAT                by REGISTRY.registerObject("meat")                  { ItemBeans.ItemFoodBase(Item.Properties().food(FoodBean(6, 0.5F)), isDrink = false) }
+    val COCO_DRINK          by REGISTRY.registerObject("coco_drink")            { ItemBeans.ItemFoodBase(Item.Properties().food(FoodBean(2, 0.4F, alwaysEat = true)), isDrink = true, Items.GLASS_BOTTLE.asItemStack(), Lists.newArrayList(EffectList.DIGESTION.instance(20 * 30, 0)))}
+    val SODA_WATER          by REGISTRY.registerObject("soda_water")            { ItemBeans.ItemFoodBase(Item.Properties().food(FoodBean(2, 0.4F, alwaysEat = true)), isDrink = true, Items.GLASS_BOTTLE.asItemStack(), Lists.newArrayList(EffectList.DIGESTION.instance(20 * 30, 0)))}
+    val APPLE_PIE           by REGISTRY.registerObject("apple_pie")             { ItemBeans.ItemFoodBase(Item.Properties().food(FoodBean(8, 0.5F))) }
 
     /* BlockItem*/
-    val BLOCKITEM_PLANT     by REGISTRY.registerObject("plant")             { BlockItem(BlockList.BLOCK_PLANT, Item.Properties()) }
+    val BLOCK_PLANT         by REGISTRY.registerObject("plant")                 { BlockItem(BlockList.BLOCK_PLANT, Item.Properties()) }
+    val BLOCK_PINATA        by REGISTRY.registerObject("pinata")                { BlockItem(BlockList.PINATA, Item.Properties()) }
+    val BLOCK_RANDOM_CAKE   by REGISTRY.registerObject("block_random_cake")     { BlockItem(BlockList.CAKE_RANDOM_BLOCK, Item.Properties()) }
+    val BLOCK_CHOCO_CAKE    by REGISTRY.registerObject("block_chocolate_cake")  { BlockItem(BlockList.CAKE_CHOCO_BLOCK, Item.Properties()) }
+    val BLOCK_CHILI_CAKE    by REGISTRY.registerObject("block_chili_cake")      { BlockItem(BlockList.CAKE_CHILI_BLOCK, Item.Properties()) }
+    val BLOCK_APPLE_CAKE    by REGISTRY.registerObject("block_apple_cake")      { BlockItem(BlockList.CAKE_APPLE_BLOCK, Item.Properties()) }
 
     /* Cake */
-    val RANDOM_CAKE         by REGISTRY.registerObject("random_cake")       { CakeRandom.CakeRandomItem() }
-    val CHOCO_CAKE          by REGISTRY.registerObject("chocolate_cake")    { CakeBlock.CakeBlockItem(BlockList.CAKE_CHOCO) }
-    val CHILI_CAKE          by REGISTRY.registerObject("chili_cake")        { CakeChili.ItemCakeChili() }
-    val APPLE_CAKE          by REGISTRY.registerObject("apple_cake")        { CakeBlock.CakeBlockItem(BlockList.CAKE_APPLE) }
+    val RANDOM_CAKE         by REGISTRY.registerObject("random_cake")           { CakeRandom.CakeRandomItem() }
+    val CHOCO_CAKE          by REGISTRY.registerObject("chocolate_cake")        { CakeBlock.CakeBlockItem(BlockList.CAKE_CHOCO) }
+    val CHILI_CAKE          by REGISTRY.registerObject("chili_cake")            { CakeChili.ItemCakeChili() }
+    val APPLE_CAKE          by REGISTRY.registerObject("apple_cake")            { CakeBlock.CakeBlockItem(BlockList.CAKE_APPLE) }
 
     fun FoodBean(hunger: Int = 2, saturation: Float = 0.1F, wolf: Boolean = false, fast: Boolean = false, alwaysEat: Boolean = false): FoodProperties {
         val builder = FoodProperties.Builder()
