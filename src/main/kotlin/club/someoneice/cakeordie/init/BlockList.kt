@@ -3,6 +3,7 @@ package club.someoneice.cakeordie.init
 import club.someoneice.cakeordie.COD
 import club.someoneice.cakeordie.common.bean.CakeBlock
 import club.someoneice.cakeordie.common.bean.FoodBlock
+import club.someoneice.cakeordie.common.block.BlockBowl
 import club.someoneice.cakeordie.common.block.BlockChiliCrop
 import club.someoneice.cakeordie.common.block.BlockPinata
 import club.someoneice.cakeordie.common.block.cake.CakeChili
@@ -20,6 +21,9 @@ object BlockList {
     val BLOCK_PLANT         by REGISTRY.registerObject("plant")                 { Block(BlockBehaviour.Properties.copy(Blocks.GLASS).strength(0.01F).lightLevel { 1 }.noOcclusion()) }
     val PINATA              by REGISTRY.registerObject("pinata")                { BlockPinata() }
     val CHILI_CROP          by REGISTRY.registerObject("chili_crop")            { BlockChiliCrop() }
+    val BLOCK_BOWL          by REGISTRY.registerObject("bowl")                  { Block(BlockBehaviour.Properties.copy(Blocks.GLASS).strength(0.01F).lightLevel { 1 }.noOcclusion()) }
+    val CHOCO_BOWL          by REGISTRY.registerObject("choco_bowl")            { BlockBowl(BlockBowl.Companion.Bowl.CHOCO) }
+    val EGGNOG_BOWL         by REGISTRY.registerObject("eggnog_bowl")           { BlockBowl(BlockBowl.Companion.Bowl.EGGNOG) }
 
     val CAKE_RANDOM         by REGISTRY.registerObject("random_cake")           { CakeRandom() }
     val CAKE_CHOCO          by REGISTRY.registerObject("chocolate_cake")        { CakeBlock() }

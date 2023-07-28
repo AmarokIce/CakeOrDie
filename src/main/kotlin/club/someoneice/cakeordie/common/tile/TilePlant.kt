@@ -7,7 +7,7 @@ import net.minecraft.world.item.ItemStack
 import net.minecraft.world.level.block.entity.BlockEntity
 import net.minecraft.world.level.block.state.BlockState
 
-class TileBowl(pos: BlockPos, state: BlockState): BlockEntity(TileList.TILE_BOWL, pos, state) {
+class TilePlant(pos: BlockPos, state: BlockState): BlockEntity(TileList.TILE_BOWL, pos, state) {
     var food: ItemStack = ItemStack.EMPTY
 
     override fun load(tag: CompoundTag) {

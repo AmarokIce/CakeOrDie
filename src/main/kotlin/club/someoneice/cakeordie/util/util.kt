@@ -56,24 +56,6 @@ fun Level.addParticleColorPaper(posX: Double, posY: Double, posZ: Double, size: 
         this.addParticle(ParticleList.PARTY_PAPER_GREEN,    x, posY, z, dx + rand.nextDouble(0.4), dy, dz + rand.nextDouble(0.4))
         this.addParticle(ParticleList.PARTY_PAPER_GREEN,    x, posY, z, dx - rand.nextDouble(0.4), dy, dz + rand.nextDouble(0.4))
         this.addParticle(ParticleList.PARTY_PAPER_GREEN,    x, posY, z, dx + rand.nextDouble(0.4), dy, dz - rand.nextDouble(0.4))
-
-        // TODO
-    }
-
-    fun Level.addParticleColorPaper(x: Double, y: Double, z: Double, size: Int, dx: Double, dy: Double, dz: Double) {
-        for (o in 0 .. size) {
-            this.addParticle(ParticleList.PARTY_PAPER_YELLOW, x, y, z, dx + rand.nextDouble(0.4), dy, dz + rand.nextDouble(0.4))
-            this.addParticle(ParticleList.PARTY_PAPER_YELLOW, x, y, z, dx - rand.nextDouble(0.4), dy, dz + rand.nextDouble(0.4))
-            this.addParticle(ParticleList.PARTY_PAPER_YELLOW, x, y, z, dx + rand.nextDouble(0.4), dy, dz - rand.nextDouble(0.4))
-
-            this.addParticle(ParticleList.PARTY_PAPER_BLUE,   x, y, z, dx + rand.nextDouble(0.4), dy, dz + rand.nextDouble(0.4))
-            this.addParticle(ParticleList.PARTY_PAPER_BLUE,   x, y, z, dx - rand.nextDouble(0.4), dy, dz + rand.nextDouble(0.4))
-            this.addParticle(ParticleList.PARTY_PAPER_BLUE,   x, y, z, dx + rand.nextDouble(0.4), dy, dz - rand.nextDouble(0.4))
-
-            this.addParticle(ParticleList.PARTY_PAPER_GREEN,  x, y, z, dx + rand.nextDouble(0.4), dy, dz + rand.nextDouble(0.4))
-            this.addParticle(ParticleList.PARTY_PAPER_GREEN,  x, y, z, dx - rand.nextDouble(0.4), dy, dz + rand.nextDouble(0.4))
-            this.addParticle(ParticleList.PARTY_PAPER_GREEN,  x, y, z, dx + rand.nextDouble(0.4), dy, dz - rand.nextDouble(0.4))
-        }
     }
 }
 
