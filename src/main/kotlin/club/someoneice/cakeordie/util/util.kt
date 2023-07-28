@@ -8,7 +8,7 @@ import net.minecraft.world.item.Item
 import net.minecraft.world.item.ItemStack
 import net.minecraft.world.level.Level
 import net.minecraft.world.level.block.Block
-import java.util.Random
+import java.util.*
 import kotlin.math.abs
 
 fun Item.asItemStack(size: Int = 1): ItemStack {
@@ -30,6 +30,8 @@ fun ItemStack.setCountWithReturn(size: Int): ItemStack {
     this.count = size
     return this
 }
+
+fun Any.random(): Random = Random()
 
 fun Level.addParticleColorPaper(posX: Double, posY: Double, posZ: Double, size: Int = 50) {
     val rand = Random()

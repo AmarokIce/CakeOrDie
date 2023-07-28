@@ -9,7 +9,6 @@ import java.awt.Color
 
 class EffectCandySmile: MobEffect(MobEffectCategory.BENEFICIAL, Color.YELLOW.rgb) {
     override fun isDurationEffectTick(tick: Int, lv: Int): Boolean = true
-
     override fun applyEffectTick(entity: LivingEntity, lv: Int) {
         super.applyEffectTick(entity, lv)
         if (entity.hurtMarked) entity.addEffect(MobEffects.MOVEMENT_SPEED.instance(20 * 3, 1))

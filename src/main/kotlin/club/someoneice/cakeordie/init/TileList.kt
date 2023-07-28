@@ -1,9 +1,9 @@
 package club.someoneice.cakeordie.init
 
 import club.someoneice.cakeordie.COD
+import club.someoneice.cakeordie.common.tile.TileBowl
 import club.someoneice.cakeordie.common.tile.TileCakeBase
 import club.someoneice.cakeordie.common.tile.TileGift
-import club.someoneice.cakeordie.common.tile.TileBowl
 import net.minecraft.world.level.block.entity.BlockEntityType
 import net.minecraftforge.registries.DeferredRegister
 import net.minecraftforge.registries.ForgeRegistries
