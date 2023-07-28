@@ -27,14 +27,14 @@ fun MobEffectInstance.copy(): MobEffectInstance = this.effect.instance(this.dura
 
 /** Set the count inline. */
 fun ItemStack.setCountWithReturn(size: Int): ItemStack {
-    this.count = size
+    count = size
     return this
 }
 
 val random: Random = Random()
 fun random(): Random = random
 
-fun Level.addParticleColorPaper(posX: Double, posY: Double, posZ: Double, size: Int = 50) {
+fun Level.addParticleColorPaper(posX: Double, posY: Double, posZ: Double, size: Int = 20) {
     val rand = Random()
     if (!this.isClientSide) return
     for (i in 0 .. size) {

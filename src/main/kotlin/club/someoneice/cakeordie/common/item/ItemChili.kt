@@ -13,6 +13,6 @@ class ItemChili: BlockItem(BlockList.CHILI_CROP, Properties().food(ItemList.Food
     override fun finishUsingItem(item: ItemStack, world: Level, entity: LivingEntity): ItemStack {
         super.finishUsingItem(item, world, entity)
         entity.addEffect(EffectList.CHILI_FIRE.instance(20 * 2, 0))
-        return item;
+        return item
     }
 }

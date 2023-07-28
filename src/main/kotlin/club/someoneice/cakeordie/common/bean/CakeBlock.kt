@@ -24,7 +24,7 @@ open class CakeBlock: Block(Properties.copy(Blocks.CAKE).strength(0.05F).lightLe
 
     override fun use(state: BlockState, world: Level, pos: BlockPos, player: Player, hand: InteractionHand, hit: BlockHitResult): InteractionResult {
         val tile = world.getBlockEntity(pos)
-        if (player.mainHandItem.item == ItemList.SUPER_SUGAR && tile is TileCakeBase){
+        if (player.mainHandItem.item == ItemList.SUPER_SUGAR && tile is TileCakeBase) {
             tile.canEatable = true
             return InteractionResult.SUCCESS
         }
