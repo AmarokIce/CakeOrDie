@@ -69,8 +69,4 @@ object ItemList {
 
         return builder.build()
     }
-
-    /* If we want to init the items with Vanilla ... */
-    // @SuppressWarnings("Deprecated")
-    // fun registry(item: Item, name: String): Item = Registry.register(BuiltInRegistries.ITEM, ResourceLocation(COD.MODID, name), item)
 }

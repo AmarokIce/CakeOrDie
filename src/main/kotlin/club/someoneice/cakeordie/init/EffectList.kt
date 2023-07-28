@@ -14,5 +14,4 @@ object EffectList {
     val CHILI_FIRE  by REGISTRY.registerObject("chili_fire")  { EffectChili() }
     val CANDY_SMILE by REGISTRY.registerObject("candy_smile") { EffectCandySmile() }
     val DIGESTION   by REGISTRY.registerObject("digestion")   { EffectDigestion() }
-
 }

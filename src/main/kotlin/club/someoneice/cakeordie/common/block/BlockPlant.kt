@@ -21,6 +21,7 @@ class BlockPlant: Block(Properties.copy(Blocks.GLASS)), EntityBlock {
         val tile = world.getBlockEntity(pos)
         if (tile is TilePlant) {
             tile.food = player.mainHandItem.copy().setCountWithReturn(64)
+            tile.setChanged()
         }
 
         return InteractionResult.SUCCESS
