@@ -34,5 +34,9 @@
   "block.cakeordie.chocolate_cake": "巧克力蛋糕",
   "block.cakeordie.chili_cake": "辛辣蛋糕",
   "block.cakeordie.apple_cake": "苹果蛋糕",
-  "item.cakeordie.exploding_cale": "惊喜蛋糕"
+  "item.cakeordie.exploding_cale": "惊喜蛋糕",
+
+  "effect.cakeordie.chili_fire": "过热!",
+  "effect.cakeordie.candy_smile": "糖靶子",
+  "effect.cakeordie.digestion": "高效消化"
 }

@@ -34,5 +34,9 @@
   "block.cakeordie.chocolate_cake": "Chocolate Cake",
   "block.cakeordie.chili_cake": "Chili Cake",
   "block.cakeordie.apple_cake": "Apple Cake",
-  "item.cakeordie.exploding_cale": "Surprise Cake"
+  "item.cakeordie.exploding_cale": "Surprise Cake",
+
+  "effect.cakeordie.chili_fire": "Too Hot!",
+  "effect.cakeordie.candy_smile": "Candy Smile",
+  "effect.cakeordie.digestion": "Digestion"
 }
