@@ -2,7 +2,6 @@ package club.someoneice.cakeordie
 
 import club.someoneice.cakeordie.common.particle.ColorPaperParticle
 import club.someoneice.cakeordie.init.*
-import net.minecraft.client.particle.*
 import net.minecraftforge.api.distmarker.Dist
 import net.minecraftforge.api.distmarker.OnlyIn
 import net.minecraftforge.client.event.RegisterParticleProvidersEvent

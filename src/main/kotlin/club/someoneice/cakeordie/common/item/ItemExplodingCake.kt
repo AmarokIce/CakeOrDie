@@ -4,7 +4,6 @@ import club.someoneice.cakeordie.common.bean.ItemBeans
 import club.someoneice.cakeordie.init.ItemList.FoodBean
 import net.minecraft.world.entity.LivingEntity
 import net.minecraft.world.item.ItemStack
-import net.minecraft.world.level.Explosion
 import net.minecraft.world.level.Level
 import net.minecraft.world.level.Level.ExplosionInteraction
 

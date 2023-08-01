@@ -1,10 +1,7 @@
 package club.someoneice.cakeordie.common.bean
 
-import club.someoneice.cakeordie.init.ItemList
 import club.someoneice.cakeordie.util.copy
 import com.google.common.collect.Lists
-import net.minecraft.world.InteractionHand
-import net.minecraft.world.InteractionResultHolder
 import net.minecraft.world.effect.MobEffectInstance
 import net.minecraft.world.entity.LivingEntity
 import net.minecraft.world.entity.player.Player
