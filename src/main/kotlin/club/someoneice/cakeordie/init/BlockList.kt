@@ -34,5 +34,4 @@ object BlockList {
     val CAKE_CHOCO_BLOCK    by REGISTRY.registerObject("chocolate_cake_block")  { FoodBlock() }
     val CAKE_CHILI_BLOCK    by REGISTRY.registerObject("chili_cake_block")      { CakeChili.BlockCakeChili() }
     val CAKE_APPLE_BLOCK    by REGISTRY.registerObject("apple_cake_block")      { FoodBlock() }
-
 }

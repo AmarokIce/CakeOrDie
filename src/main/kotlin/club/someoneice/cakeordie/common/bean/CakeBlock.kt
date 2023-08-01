@@ -10,6 +10,8 @@ import net.minecraft.world.InteractionHand
 import net.minecraft.world.InteractionResult
 import net.minecraft.world.entity.player.Player
 import net.minecraft.world.item.BlockItem
+import net.minecraft.world.item.Item
+import net.minecraft.world.item.Items
 import net.minecraft.world.level.Level
 import net.minecraft.world.level.block.Block
 import net.minecraft.world.level.block.Blocks
@@ -33,11 +35,13 @@ open class CakeBlock: Block(Properties.copy(Blocks.CAKE).strength(0.05F).lightLe
         world.playLocalSound(pos, SoundEvents.GENERIC_EAT, SoundSource.BLOCKS, 0.5f, 2.6f + (world.random.nextFloat() - world.random.nextFloat()) * 0.8f, false)
         world.setBlock(pos, BlockList.BLOCK_PLANT.defaultBlockState(), 3)
         world.removeBlockEntity(pos)
+        Items.SPYGLASS
 
         return InteractionResult.SUCCESS
     }
 
     override fun newBlockEntity(pos: BlockPos, state: BlockState): BlockEntity = TileCakeBase(pos, state)
 
-    open class CakeBlockItem(block: Block, properties: Properties = Properties().food(ItemList.FoodBean(3, 0.1F, alwaysEat = true))): BlockItem(block, properties)
+    // open class CakeBlockItem(block: Block, properties: Properties = Properties().food(ItemList.FoodBean(3, 0.1F, alwaysEat = true))): BlockItem(block, properties)
+    open class CakeBlockItem(block: Block, properties: Properties = Properties().food(ItemList.FoodBean(3, 0.1F, alwaysEat = true))): Item(properties)
 }

@@ -45,10 +45,10 @@ object ItemList {
     val BLOCK_CHOCO_BOWL    by REGISTRY.registerObject("choco_bowl")            { BlockItem(BlockList.CHOCO_BOWL, Item.Properties()) }
     val BLOCK_EGGNOG_BOWL   by REGISTRY.registerObject("eggnog_bowl")           { BlockItem(BlockList.EGGNOG_BOWL, Item.Properties()) }
 
-    val BLOCK_RANDOM_CAKE   by REGISTRY.registerObject("block_random_cake")     { BlockItem(BlockList.CAKE_RANDOM_BLOCK, Item.Properties()) }
-    val BLOCK_CHOCO_CAKE    by REGISTRY.registerObject("block_chocolate_cake")  { BlockItem(BlockList.CAKE_CHOCO_BLOCK, Item.Properties()) }
-    val BLOCK_CHILI_CAKE    by REGISTRY.registerObject("block_chili_cake")      { BlockItem(BlockList.CAKE_CHILI_BLOCK, Item.Properties()) }
-    val BLOCK_APPLE_CAKE    by REGISTRY.registerObject("block_apple_cake")      { BlockItem(BlockList.CAKE_APPLE_BLOCK, Item.Properties()) }
+    val BLOCK_RANDOM_CAKE   by REGISTRY.registerObject("random_cake_block")     { BlockItem(BlockList.CAKE_RANDOM_BLOCK, Item.Properties()) }
+    val BLOCK_CHOCO_CAKE    by REGISTRY.registerObject("chocolate_cake_block")  { BlockItem(BlockList.CAKE_CHOCO_BLOCK, Item.Properties()) }
+    val BLOCK_CHILI_CAKE    by REGISTRY.registerObject("chili_cake_block")      { BlockItem(BlockList.CAKE_CHILI_BLOCK, Item.Properties()) }
+    val BLOCK_APPLE_CAKE    by REGISTRY.registerObject("apple_cake_block")      { BlockItem(BlockList.CAKE_APPLE_BLOCK, Item.Properties()) }
 
     /* Cake */
     val RANDOM_CAKE         by REGISTRY.registerObject("random_cake")           { CakeRandom.CakeRandomItem() }
@@ -56,7 +56,7 @@ object ItemList {
     val CHILI_CAKE          by REGISTRY.registerObject("chili_cake")            { CakeChili.ItemCakeChili() }
     val APPLE_CAKE          by REGISTRY.registerObject("apple_cake")            { CakeBlock.CakeBlockItem(BlockList.CAKE_APPLE) }
 
-    val EXPLODING_CAKE      by REGISTRY.registerObject("exploding_cale")        { ItemExplodingCake() }
+    val EXPLODING_CAKE      by REGISTRY.registerObject("exploding_cake")        { ItemExplodingCake() }
 
     fun FoodBean(hunger: Int = 2, saturation: Float = 0.1F, wolf: Boolean = false, fast: Boolean = false, alwaysEat: Boolean = false): FoodProperties {
         val builder = FoodProperties.Builder()

@@ -10,7 +10,7 @@ import net.minecraft.world.level.Level.ExplosionInteraction
 
 class ItemExplodingCake: ItemBeans.ItemFoodBase(Properties().food(FoodBean(1, 0.2F))) {
     override fun finishUsingItem(item: ItemStack, world: Level, entity: LivingEntity): ItemStack {
-        world.explode(entity, entity.x, entity.y, entity.z, 3.0F, ExplosionInteraction.BLOCK)
+        world.explode(entity, entity.x, entity.y, entity.z, 3.0F, ExplosionInteraction.NONE)
         return super.finishUsingItem(item, world, entity)
     }
 }

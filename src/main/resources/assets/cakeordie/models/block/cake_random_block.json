@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "top": "cakeordie:block/random_cake_top",
+    "side": "cakeordie:block/random_cake_side",
+    "bottom": "cakeordie:block/random_cake_bottom"
+  }
+}
