@@ -29,7 +29,8 @@ class ItemCandy: ItemBeans.ItemBase(Properties().food(ItemList.FoodBean(fast = t
 
         if (!world.isClientSide) {
             if (world.random.nextDouble() > 0.4) entity.addEffect(effects[world.random.nextInt(effects.size)].instance(20 * 5, 0))
-        } else world.addParticleColorPaper(entity.x, entity.y, entity.z, 5)
+        }
+        else world.addParticleColorPaper(entity.x, entity.y, entity.z, 5)
 
         return item
     }

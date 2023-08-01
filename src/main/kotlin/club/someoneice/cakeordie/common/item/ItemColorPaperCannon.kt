@@ -12,7 +12,8 @@ class ItemColorPaperCannon: ItemBeans.ItemBase() {
     override fun use(world: Level, player: Player, hand: InteractionHand): InteractionResultHolder<ItemStack> {
         val item = player.getItemInHand(hand)
 
-        world.addParticleColorPaper(player.x, player.y + 2.5, player.z)
+        if (world.isClientSide)
+            world.addParticleColorPaper(player.x, player.y + 2.5, player.z)
         item.shrink(1)
 
         return InteractionResultHolder.success(item)

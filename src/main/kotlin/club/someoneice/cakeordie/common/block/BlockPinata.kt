@@ -29,8 +29,9 @@ class BlockPinata: Block(Properties.copy(Blocks.GLASS).strength(0.4F).sound(Soun
     override fun use(state: BlockState, world: Level, pos: BlockPos, player: Player, hand: InteractionHand, hit: BlockHitResult): InteractionResult {
         if (player.mainHandItem.item != ItemList.PINATA_STICK) return InteractionResult.PASS
 
+        if (world.isClientSide)
+            world.addParticleColorPaper(pos.x + 0.5, pos.y + 0.5, pos.z + 0.5)
         world.playSound(null, pos, PINATA_SOUND_ARRAY[world.random.nextInt(PINATA_SOUND_ARRAY.size)], SoundSource.BLOCKS)
-        world.addParticleColorPaper(pos.x + 0.5, pos.y + 0.5, pos.z + 0.5)
         world.removeBlock(pos, true)
 
         world.addFreshEntity(ItemEntity(world, pos.x.toDouble(), pos.y.toDouble(), pos.z.toDouble(), ItemList.CANDY.asItemStack(world.random.nextInt(4) + 1)))

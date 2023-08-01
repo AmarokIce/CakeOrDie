@@ -22,7 +22,7 @@ object COD {
         ParticleList.REGISTRY.register(MOD_BUS)
         CreativeTabList.REGISTRY.register(MOD_BUS)
 
-        MOD_BUS.register(this)
+        // MOD_BUS.register(this)
         MOD_BUS.register(this::initParticleClient)
     }
 
