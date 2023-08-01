@@ -1,4 +1,13 @@
 {
+  "itemGroup.cakeordie": "糕事无亡",
+
+  "cake.invitation.message": "出发！",
+  "cake.invitation_fail.message":"这封邀请函是空的!",
+  "cake.invitation_info.message": "这是一份邀请函，右击前往目的地。",
+  "cake.invitation_pos.message":"邀请聚会地点: ",
+  "cake.invitation_compere.message": "主持人: ",
+  "cake.invitation_gift.message":"邀请函中夹入的礼物: ",
+
   "item.cakeordie.invitation": "邀请函",
   "item.cakeordie.color_paper": "彩色纸屑",
   "item.cakeordie.pinata_stick": "皮纳塔击碎棍",

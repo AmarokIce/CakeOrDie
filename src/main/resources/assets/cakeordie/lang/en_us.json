@@ -1,4 +1,13 @@
 {
+  "itemGroup.cakeordie": "Cake or Die",
+
+  "cake.invitation.message": "Here we go!",
+  "cake.invitation_fail.message":"This invitation is empty!",
+  "cake.invitation_info.message": "This is a invitation. Right-Click to go.",
+  "cake.invitation_pos.message":"The invitation pos: ",
+  "cake.invitation_compere.message": "The compere: ",
+  "cake.invitation_gift.message":"A gift is in this invitation: ",
+
   "item.cakeordie.invitation": "Invitation",
   "item.cakeordie.color_paper": "Color Paper",
   "item.cakeordie.pinata_stick": "Pinata Stick",
